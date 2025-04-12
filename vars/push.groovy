@@ -12,4 +12,5 @@ def call(String credId , String IMAGE_NAME){
                     echo "Image Pushed to Docker Hub Successfully"
 
                     }
+}
         
