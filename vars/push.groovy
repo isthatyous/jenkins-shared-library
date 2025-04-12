@@ -7,7 +7,7 @@ def call(String credId , String IMAGE_NAME){
                     
                     echo "Pushing Image to Docker Hub"
                     sh "docker image tag ${IMAGE_NAME} ${env.DockerHubUser}/${IMAGE_NAME}"
-                    sh "docker login -u ${env.DockerHubUser} -p ${DockerHubPass}"
+                    sh "docker login -u ${env.DockerHubUser} -p ${env.DockerHubPass}"
                     sh "docker push ${env.DockerHubUser}/${IMAGE_NAME}:latest"
                     echo "Image Pushed to Docker Hub Successfully"
 
